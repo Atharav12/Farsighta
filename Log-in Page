@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seek coding</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust the height as per your requirement */
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 30px; /* Add margin-bottom to create space below the dropdown button */
+        }
+
+        .dropdown-toggle {
+            margin-left: 10px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 160px;
+            padding: 5px 0;
+            margin: 2px 0 0;
+            font-size: 14px;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, .15);
+            border-radius: 4px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        }
+
+        .dropdown-menu>li>a {
+            display: block;
+            padding: 3px 20px;
+            clear: both;
+            font-weight: normal;
+            line-height: 1.42857143;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        .dropdown-menu>li>a:hover,
+        .dropdown-menu>li>a:focus {
+            color: #fff;
+            text-decoration: none;
+            background-color: #337ab7;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='website.html'></a>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='https://www.instagram.com/'>Home</a></li>
+                    <li><a href='http://127.0.0.1:5501/aboutus.html'>About Us</a></li>
+                    <li><a href='#'>Services</a></li>
+                    <li><a href='#'>Contact</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'; document.getElementById('YourRole').style.display='none'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='checkbox' class='check-box'><span>Remember Password</span>
+                    <button type='submit' class='submit-btn'>Log in</button>
+                </form>
+                <form id='register' class='input-group-register'>
+                    <input type='text' class='input-field' placeholder='First Name' required>
+                    <input type='text' class='input-field' placeholder='Last Name' required>
+                    <input type='email' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='password' class='input-field' placeholder='Confirm Password' required>
+                    <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit' class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="dropdown">
+            <button id="YourRole" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Your Role
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="document.getElementById('login-form').style.display='block'; document.getElementById('YourRole').style.display='none'">Manufacturer</a></li>
+                <li><a href="#" onclick="document.getElementById('login-form').style.display='block'; document.getElementById('YourRole').style.display='none'">Seller</a></li>
+                <li><a href="http://127.0.0.1:5501/search%20bar.html">Customer</a></li>
+            </ul>
+        </div>
+    </div>
+    <img src="https://i.pinimg.com/564x/08/62/17/0862175616b6714b91855838dbbf0631.jpg" alt="Image" style="display: block; margin: 0 auto;">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+        function register() {
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';
+        }
+        function login() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+            document.getElementById('YourRole').style.display = 'none'; // Hide the dropdown button
+        }
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.getElementById('YourRole').style.display = 'block'; // Show the dropdown button
+            }
+        }
+
+        document.getElementById('login').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission behavior
+
+            // Perform any necessary login logic here
+
+            // Redirect the user to the "another.html" page
+            window.location.href = 'http://127.0.0.1:5501/another.html';
+        });
+
+        document.getElementById('register').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission behavior
+
+            // Perform any necessary registration logic here
+
+            // Redirect the user to the "another.html" page
+            window.location.href = 'http://127.0.0.1:5501/another.html';
+        });
+    </script>
+</body>
+</html>
