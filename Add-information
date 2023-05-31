@@ -76,25 +76,25 @@
 
 <body>
     <header>
-        <h1>My Blog</h1>
+        <h1>Details</h1>
     </header>
 
     <section class="blog-post">
-        <h2>Blog Post Title</h2>
+        <h2> Post Title</h2>
         <div class="center-column">
             <form id="blogForm">
                 <div class="form-group">
-                    <label for="blogContent">Blog Content:</label>
+                    <label for="blogContent">Add Information:</label>
                     <textarea id="blogContent" name="blogContent" rows="5" cols="50"></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="blogImage">Blog Image:</label>
+                    <label for="blogImage">Image:</label>
                     <input type="file" id="blogImage" name="blogImage">
                 </div>
 
                 <div class="form-group">
-                    <button type="submit">Add Blog Post</button>
+                    <button type="submit">Post</button>
                 </div>
             </form>
         </div>
