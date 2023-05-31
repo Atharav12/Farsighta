@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    
+    html {
+      box-sizing: border-box;
+    }
+    
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+    }
+    
+    .about-section h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    
+    .about-section p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .column {
+      width: 33.33%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+    
+    .card {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card img {
+      width: 100%;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    
+    .container {
+      padding: 20px;
+    }
+    
+    .container h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .container p {
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+    
+    .title {
+      color: #555;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .button {
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="about-section">
+    <h1>About Us Page</h1>
+    <p>Welcome to our website dedicated to fake product detection!</p>
+    <p>At FakeProductDetection.com, we strive to protect consumers and brand manufacturers by providing a reliable platform for identifying counterfeit products in the market.</p>
+    <p>Our mission is to empower both manufacturers and buyers with the tools and information needed to combat the growing problem of fake products.</p>
+    <p>Through advanced algorithms and data analysis, we have developed an efficient system to verify the authenticity of various products, focusing initially on shoes.</p>
+    <p>With our user-friendly interface, manufacturers and sellers can easily register, provide detailed information about their products, and track the distribution of genuine items to authorized stores.</p>
+    <p>For buyers, our platform offers a seamless experience. Simply choose the desired brand, enter the product code, and our system will quickly determine whether the product is genuine or counterfeit.</p>
+    <p>Join us in the fight against fake products and help create a safer marketplace for everyone.</p>
+  </div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Our Team</title>
+      <style>
+          .row {
+              display: flex;
+              justify-content: center;
+          }
+  
+          .column {
+              flex: 33.33%;
+              padding: 10px;
+              box-sizing: border-box;
+          }
+  
+          .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              transition: 0.3s;
+              text-align: center;
+          }
+  
+          .card:hover {
+              box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          }
+  
+          .container {
+              padding: 2px 16px;
+          }
+      </style>
+  </head>
+  <body>
+      <h2 style="text-align: center">Our Team</h2>
+      <div class="row">
+          <div class="column">
+              <div class="card">
+                  <div style="background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F593208582151414978%2F&psig=AOvVaw0c6PFNlbtgFcNvlbuWmDUM&ust=1685524518211000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCODU28LanP8CFQAAAAAdAAAAABAQ'); background-size: cover; height: 300px;"></div>
+                  <div class="container">
+                      <h2>Jane Doe</h2>
+                      <p class="title">CEO & Founder</p>
+                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      <p>jane@example.com</p>
+                      <p><button class="button">Contact</button></p>
+                  </div>
+              </div>
+          </div>
+          <div class="column">
+              <div class="card">
+                  <div style="background-image: url('path_to_mike_image.jpg'); background-size: cover; height: 300px;"></div>
+                  <div class="container">
+                      <h2>Mike Ross</h2>
+                      <p class="title">Art Director</p>
+                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      <p>mike@example.com</p>
+                      <p><button class="button">Contact</button></p>
+                  </div>
+              </div>
+          </div>
+          <div class="column">
+              <div class="card">
+                  <div style="background-image: url('data:image/jpeg;base64,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'); background-size: cover; height: 300px;"></div>
+                  <div class="container">
+                      <h2>John Doe</h2>
+                      <p class="title">Designer</p>
+                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      <p>john@example.com</p>
+                      <p><button class="button">Contact</button></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </body>
+  </html>
+  
